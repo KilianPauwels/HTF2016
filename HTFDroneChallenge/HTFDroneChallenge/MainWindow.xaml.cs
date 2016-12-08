@@ -26,22 +26,62 @@ namespace HTFDroneChallenge
         {
             InitializeComponent();
 
+
         }
 
 
         private void cmbDetails_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            SeriesCollection = new SeriesCollection
+
+            switch(cmbDetails.SelectedIndex)
+            {
+                case 0:
+                SeriesCollection = new SeriesCollection
             {
 
                 new LineSeries
                 {
-                    Title = "Series 1",
+                    Title = "Temperature",
                     Values = new ChartValues<double> { 4, 6, 5, 2 ,4 }
                 },
+};
+                    break;
+                case 1:
+                    SeriesCollection = new SeriesCollection
+            {
 
+                new LineSeries
+                {
+                    Title = "Wind Speed",
+                    Values = new ChartValues<double> { 1,2,4,3,5 }
+                },
+};
+                    break;
+                case 2:
+                    SeriesCollection = new SeriesCollection
+            {
 
-        };
+                new LineSeries
+                {
+                    Title = "Wind oriantation",
+                    Values = new ChartValues<double> { 5,3,1,5,6 }
+                },
+};
+                    break;
+                case 3:
+                    SeriesCollection = new SeriesCollection
+            {
+
+                new LineSeries
+                {
+                    Title = "Particle Size",
+                    Values = new ChartValues<double> { 3,3,3,4,1}
+                },
+};
+                    break;
+
+            };
+        
             YFormatter = value => value.ToString("C");
 
 

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HTFDroneChallenge"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+   
         mc:Ignorable="d"
         Title="MainWindow" Height="675" Width="600
         ">
@@ -27,7 +28,7 @@
         <TextBox x:Name="txtTimeStamp" HorizontalAlignment="Left" Height="23" Margin="48.5,93,0,0" TextWrapping="Wrap" Text="No data yet" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.303,-0.254" IsEnabled="False" Grid.Column="1"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="0,93,0,0" VerticalAlignment="Top" Width="592" Grid.ColumnSpan="2"/>
         <Label x:Name="lblTitelDetails" Content="History and graphics" HorizontalAlignment="Left" Margin="175,165,0,0" VerticalAlignment="Top" FontFamily="Courier New" FontSize="16"/>
-        <ComboBox x:Name="cmbDetails" HorizontalAlignment="Left" Margin="211,198,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbDetails_SelectionChanged">
+        <ComboBox x:Name="cmbDetails" HorizontalAlignment="Left" Margin="211,198,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbDetails_SelectionChanged" IsReadOnly="True">
             <ListBoxItem Content="Temperature"/>
             <ListBoxItem Content="Wind Speed"/>
             <ListBoxItem Content="Wind orientation"/>
