@@ -4,9 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HTFDroneChallenge"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="600
+        ">
     <Grid>
-        
+        <Label x:Name="lblTitel" Content="Drone monitor
+               " HorizontalAlignment="Center" Margin="201,10,135,0" VerticalAlignment="Top" RenderTransformOrigin="-0.893,1.549" FontSize="18.667" FontWeight="Bold" FontFamily="Courier New"/>
+        <Label x:Name="lblTemp" Content="Temperature :" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lblWindSpeed" Content="Wind Speed :" HorizontalAlignment="Left" Margin="120,51,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="lblWindorientation" Content="Wind Orientation :" HorizontalAlignment="Left" Margin="237,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.852,0.626" Height="26"/>
+        <Label x:Name="LblParticleSize" Content="Particle Size :" HorizontalAlignment="Left" Margin="383,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="6.712,0.451"/>
+        <Label x:Name="lblTime" Content="Timestamp :" HorizontalAlignment="Left" Margin="496,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="6.712,0.451" Height="26"/>
+        <TextBox x:Name="txtTemp" HorizontalAlignment="Left" Height="23" Margin="9,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.303,-0.254" IsEnabled="False"/>
+        <TextBox x:Name="txtWindSpeed" HorizontalAlignment="Left" Height="23" Margin="120,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.303,-0.254" IsEnabled="False"/>
+        <TextBox x:Name="txtWindOrintation" HorizontalAlignment="Left" Height="23" Margin="237,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.303,-0.254" IsEnabled="False"/>
+        <TextBox x:Name="txtParticleSize" HorizontalAlignment="Left" Height="23" Margin="383,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.303,-0.254" IsEnabled="False"/>
+        <TextBox x:Name="txtTimeStamp" HorizontalAlignment="Left" Height="23" Margin="496,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.303,-0.254" IsEnabled="False"/>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="0,93,0,0" VerticalAlignment="Top" Width="592"/>
+        <Label x:Name="lblTitelDetails" Content="History and graphics" HorizontalAlignment="Left" Margin="175,165,0,0" VerticalAlignment="Top" FontFamily="Courier New" FontSize="16"/>
+        <ComboBox x:Name="cmbDetails" HorizontalAlignment="Left" Margin="211,198,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbDetails_SelectionChanged">
+            <ListBoxItem Content="Temperature"/>
+            <ListBoxItem Content="Wind Speed"/>
+            <ListBoxItem Content="Wind orientation"/>
+            <ListBoxItem Content="Particle Size"/>
+        </ComboBox>
+        <lvc:CartesianChart Series="{Binding SeriesCollection}" Margin="10,252,22,69" />
+
     </Grid>
 </Window>

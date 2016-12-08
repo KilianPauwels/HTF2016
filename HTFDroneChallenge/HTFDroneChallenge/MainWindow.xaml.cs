@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace HTFDroneChallenge
 {
@@ -23,6 +25,11 @@ namespace HTFDroneChallenge
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void cmbDetails_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
