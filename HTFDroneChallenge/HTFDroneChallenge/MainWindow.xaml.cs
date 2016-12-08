@@ -33,10 +33,10 @@ namespace HTFDroneChallenge
         private void cmbDetails_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            switch(cmbDetails.SelectedIndex)
+            switch (cmbDetails.SelectedIndex)
             {
                 case 0:
-                SeriesCollection = new SeriesCollection
+                    Grafiek.Series = new SeriesCollection
             {
 
                 new LineSeries
@@ -47,7 +47,7 @@ namespace HTFDroneChallenge
 };
                     break;
                 case 1:
-                    SeriesCollection = new SeriesCollection
+                    Grafiek.Series = new SeriesCollection
             {
 
                 new LineSeries
@@ -58,7 +58,7 @@ namespace HTFDroneChallenge
 };
                     break;
                 case 2:
-                    SeriesCollection = new SeriesCollection
+                    Grafiek.Series =  new SeriesCollection
             {
 
                 new LineSeries
@@ -69,7 +69,7 @@ namespace HTFDroneChallenge
 };
                     break;
                 case 3:
-                    SeriesCollection = new SeriesCollection
+                    Grafiek.Series = new SeriesCollection
             {
 
                 new LineSeries
@@ -81,16 +81,16 @@ namespace HTFDroneChallenge
                     break;
 
             };
-        
+
             YFormatter = value => value.ToString("C");
 
 
 
             DataContext = this;
         }
-        public SeriesCollection SeriesCollection { get; set; }
+        //public SeriesCollection SeriesCollection { get; set; }
         public Func<double, string> YFormatter { get; set; }
     }
-    }
+}
 
 
