@@ -1,0 +1,10 @@
+{
+  "Temperature": 215.0,
+  "WindSpeed": 5.0,
+  "WindOrientation": {
+    "Value": 225,
+    "Orientation": 225
+  },
+  "ParticleSize": 10.0,
+  "TimeStamp": "2016-12-08T08:26:36.8508599Z"
+}
