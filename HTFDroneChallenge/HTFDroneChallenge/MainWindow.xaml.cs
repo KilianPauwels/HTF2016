@@ -33,11 +33,16 @@ namespace HTFDroneChallenge
 
         private void cmbDetails_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            double Temperature;
-            double WindSpeed;
-            double WindOrientation;
-            double ParticleSize;
+            double Temperature = 180;
+            double WindSpeed = 16;
+            double WindOrientation = 2400;
+            double ParticleSize = 0.20;
 
+            txtTemp.Text = Convert.ToString(Temperature);
+            txtWindSpeed.Text = Convert.ToString(WindSpeed);
+            txtParticleSize.Text = Convert.ToString(ParticleSize);
+            txtWindOrintation.Text = Convert.ToString(WindOrientation);
+                
             switch (cmbDetails.SelectedIndex)
             {
                 case 0:
@@ -87,11 +92,11 @@ namespace HTFDroneChallenge
 
             };
 
-           //  if(Temperature < 175 || (Temperature < 190 && 1125 <= WindOrientation => 2475) ||  WindSpeed > 26 || (Windspeed > 14 && ParticleSize >0.25) || ParticleSize > 1)
-           //  { lblWarning.Visibility = Visibility.Visible; }
+            if(Temperature < 175 || (Temperature < 190 && 1125 < WindOrientation && WindOrientation < 2475) || WindSpeed > 26 || (WindSpeed > 14 && ParticleSize >0.25) || ParticleSize > 1)
+             { lblWarning.Visibility = Visibility.Visible; }
 
-           // if ( Temperature < 200 && 1125 <= WindOrientation => 2475 && Windspeed > 12 && ParticleSize > 0.15)
-           //  {lblCritWarning.Visibility = Visibility.Visible; }
+            if ( Temperature < 200 && 1125 < WindOrientation && WindOrientation < 2475 && WindSpeed > 12 && ParticleSize > 0.15)
+             {lblCritWarning.Visibility = Visibility.Visible; }
             
 
 
