@@ -25,11 +25,32 @@ namespace HTFDroneChallenge
         public MainWindow()
         {
             InitializeComponent();
+
         }
+
 
         private void cmbDetails_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            SeriesCollection = new SeriesCollection
+            {
 
+                new LineSeries
+                {
+                    Title = "Series 1",
+                    Values = new ChartValues<double> { 4, 6, 5, 2 ,4 }
+                },
+
+
+        };
+            YFormatter = value => value.ToString("C");
+
+
+
+            DataContext = this;
         }
+        public SeriesCollection SeriesCollection { get; set; }
+        public Func<double, string> YFormatter { get; set; }
     }
-}
+    }
+
+
